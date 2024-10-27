@@ -1,0 +1,9 @@
+# Carpeta de dependències de npm
+node_modules/
+
+# Carpetes resultat de dist
+dist/
+
+# Cache de Parcel
+.parcel-cache/
+
