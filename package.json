@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "M4.257 - PAC1 Desenvolupament d'una web",
   "source": "src/index.html",
+  "browserslist": "> 0.25%, not dead",
   "scripts": {
     "start": "npm-run-all clean parcel:dev",
     "build": "npm-run-all clean parcel:build",
@@ -23,7 +24,9 @@
     "javascript",
     "frontend",
     "responsive",
-    "UOC"
+    "Universitat Oberta de Catalunya",
+    "Desenvolupament de llocs i aplicacions web",
+    "Eines HTML i CSS I"
   ],
   "author": "Javier Garcia Fortanet",
   "license": "",
@@ -32,8 +35,12 @@
   },
   "homepage": "https://github.com/jfortanet/m4257-pac1#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.26.0",
+    "@parcel/transformer-sass": "^2.12.0",
     "npm-run-all": "^4.1.5",
     "parcel": "^2.12.0",
-    "rimraf": "^6.0.1"
+    "posthtml-include": "^2.0.1",
+    "rimraf": "^6.0.1",
+    "sass": "^1.80.5"
   }
 }

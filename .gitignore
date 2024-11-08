@@ -1,7 +1,7 @@
 # Carpeta de dependències de npm
 node_modules/
 
-# Carpetes resultat de dist
+# Carpeta de distribució
 dist/
 
 # Cache de Parcel
