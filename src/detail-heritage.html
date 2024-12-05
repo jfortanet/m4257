@@ -8,14 +8,24 @@
     <meta name="keywords" content="Penyagolosa, parc, naturalesa, Castelló, patrimoni, història">
     <meta name="author" content="Javier Garcia">
     <title>Patrimoni</title>
+    <include src="partial/favicon.html"></include>
     <link rel="stylesheet" href="css/styles.scss">
 </head>
 
 <body class="detail">
-    <include src="header.html"></include>
+    <include src="partial/header.html"></include>
     <main class="container">
         <article>
-            <h1>Parc natural del Penyagolosa</h1>
+            <figure class="featured-image">
+                <picture>
+                    <source srcset="img/ermitori_sant_joan_baptista_entrada_artdirection.jpeg?as=avif" type="image/avif" media="(max-width: 767px)">
+                    <source srcset="img/ermitori_sant_joan_baptista_entrada_artdirection.jpeg?as=webp" type="image/webp" media="(max-width: 767px)">
+                    <source srcset="img/ermitori_sant_joan_baptista_entrada.jpeg?as=avif" type="image/avif" media="(min-width: 768px)">
+                    <source srcset="img/ermitori_sant_joan_baptista_entrada.jpeg?as=webp" type="image/webp" media="(min-width: 768px)">
+                    <img src="img/ermitori_sant_joan_baptista_entrada.jpeg" alt="Ermitori de Sant Joan Baptista de Penyagolosa">
+                </picture>
+                <figcaption>Ermitori de Sant Joan Baptista</figcaption>
+            </figure>
             <nav>
                 <ul>
                     <li><a href="detail-flora.html">Flora i vegetació</a></li>
@@ -25,7 +35,7 @@
             <section>
                 <h2>Patrimoni</h2>
                 <p>L'origen del topònim Penyagolosa es perd en el temps, però sembla que procedeix de l'evolució metatètica
-                    del terme pinna (muntanya) i lucosa (boscós), segons alguns documents, com el relatiu a la donació de
+                    del terme <i lang="la">pinna</i> (muntanya) i <i lang="la">lucosa</i> (boscós), segons alguns documents, com el relatiu a la donació de
                     Culla a l'Ordre del Temple el <time datetime="1213"></time>1213. Al voltant d'aquesta muntanya hi ha una 
                     gran quantitat de vestigis dels pobles que van habitar i transitar la zona. Així, s'hi poden trobar assentaments 
                     ibers, restes de calçades romanes, i s'aprecien també els signes actuals de despoblament, la qual cosa implica una 
@@ -48,25 +58,41 @@
                 <ul>
                     <li>
                         <figure>
-                            <img src="img/ermitori_sant_joan_baptista.jpg" alt="Vista aèrea de l'ermitori del parc de Penyagolsa">
+                            <picture>
+                                <source srcset="img/ermitori_sant_joan_baptista.jpeg?as=avif" type="image/avif">
+                                <source srcset="img/ermitori_sant_joan_baptista.jpeg?as=webp" type="image/webp">
+                                <img src="img/ermitori_sant_joan_baptista.jpeg" alt="Vista aèrea de l'ermitori del parc de Penyagolsa">
+                            </picture>
                             <figcaption>Ermitori de Sant Joan Baptista</figcaption>
                         </figure>
                     </li>
                     <li>
                         <figure>
-                            <img src="img/bibioj.jpg" alt="Mas de Bibioj amb el parc al fons">
+                            <picture>
+                                <source srcset="img/bibioj.jpeg?as=avif" type="image/avif">
+                                <source srcset="img/bibioj.jpeg?as=webp" type="image/webp">
+                                <img src="img/bibioj.jpeg" alt="Mas de Bibioj amb el parc al fons">
+                            </picture>
                             <figcaption>Mas de Bibioj</figcaption>
                         </figure>
                     </li>
                     <li>
                         <figure>
-                            <img src="img/peregrins_useres.jpg" alt="Peregrins de les Useres en processó">
+                            <picture>
+                                <source srcset="img/peregrins_useres.jpeg?as=avif" type="image/avif">
+                                <source srcset="img/peregrins_useres.jpeg?as=webp" type="image/webp">
+                                <img src="img/peregrins_useres.jpeg" alt="Peregrins de les Useres en processó">
+                            </picture>
                             <figcaption>Peregrins de les Useres</figcaption>
                         </figure>
                     </li>
                     <li>
                         <figure>
-                            <img src="img/construccio_de_pedra_seca.jpg" alt="Detall de les parets d'una construcció fetes amb pedra seca">
+                            <picture>
+                                <source srcset="img/construccio_de_pedra_seca.jpeg?as=avif" type="image/avif">
+                                <source srcset="img/construccio_de_pedra_seca.jpeg?as=webp" type="image/webp">
+                                <img src="img/construccio_de_pedra_seca.jpeg" alt="Detall de les parets d'una construcció fetes amb pedra seca">
+                            </picture>
                             <figcaption>Construcció de pedra seca</figcaption>
                         </figure>
                     </li>
@@ -93,7 +119,7 @@
             </section>
         </article>
     </main>
-    <include src="footer.html"></include>
+    <include src="partial/footer.html"></include>
 </body>
 
 </html>

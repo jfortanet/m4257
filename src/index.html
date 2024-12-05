@@ -8,16 +8,27 @@
     <meta name="keywords" content="Penyagolosa, parc, naturalesa, Castelló">
     <meta name="author" content="Javier Garcia">
     <title>Portada</title>
+    <include src="partial/favicon.html"></include>
     <link rel="stylesheet" href="css/styles.scss">
 </head>
 
 <body class="index">
-    <include src="header.html"></include>
+    <include src="partial/header.html"></include>
     <main class="container">
-        <h1>Penyagolosa</h1>
-        <p>Gegant de Pedra</p>
+        <div>
+            <img id="ornament-image" src="img/laurel_wreath.svg" alt="">
+            <img id="overlay-image"
+                srcset="img/penyagolosa_entrada_256.webp 256w, 
+                        img/penyagolosa_entrada_768.webp 768w, 
+                        img/penyagolosa_entrada_1k6.webp 1600w"
+                sizes="(max-width: 575px) 90vw, 
+                    (min-width: 576px) 50vw, 
+                    (min-width: 1200px) 33vw" 
+                src="img/penyagolosa_entrada.jpeg" alt="Entrada al parc natural de Penyagolosa">
+                <p>Gegant de Pedra</p>
+        </div>
     </main>
-    <include src="footer.html"></include>
+    <include src="partial/footer.html"></include>
 </body>
 
 </html>

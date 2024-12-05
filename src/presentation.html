@@ -8,24 +8,25 @@
     <meta name="keywords" content="Penyagolosa, parc, naturalesa, Castelló, orografia, cultura, com arribar">
     <meta name="author" content="Javier Garcia">
     <title>Presentació</title>
+    <include src="partial/favicon.html"></include>
     <link rel="stylesheet" href="css/styles.scss">
 </head>
 
 <body class="presentation">
-    <include src="header.html"></include>
+    <include src="partial/header.html"></include>
     <main class="container">
-        <h1>Parc natural de Penyagolosa</h1>
+        <h2>Introducció</h2>
         <p>El Parc Natural del Penyagolosa és un espai natural protegit situat a l'interior de la província de Castelló,
             Comunitat Valenciana. Aquest parc s'estén pels termes municipals de Vistabella del Maestrat, Vilafermosa i
             Xodos, i abraça el massís del Peñagolosa, una de les muntanyes més icòniques del territori valencià. </p>
-
+        
         <div class="slider">
             <div class="slider-inner">
-                <img src="./img/penyagolosa_monte.jpg" alt="Vista del parc de Penyagolosa">
-                <img src="./img/penyagolosa_entrada.jpg" alt="Entrada del parc de Penyagolosa">
-                <img src="./img/penyagolosa_cim.jpg" alt="Cim de Penyagolosa (1814 metres s. n. m.)">
-                <img src="./img/penyagolosa_massis.jpg" alt="Cara sud del massís Penyagolosa">
-                <img src="./img/penyagolosa_vista.jpg" alt="Pic del Martinet des del cim de Penyagolosa">
+                <img src="img/penyagolosa_monte.jpeg" alt="Vista del parc de Penyagolosa">
+                <img src="img/penyagolosa_entrada.jpeg" alt="Entrada del parc de Penyagolosa">
+                <img src="img/penyagolosa_cim.jpeg" alt="Cim de Penyagolosa (1814 metres s. n. m.)">
+                <img src="img/penyagolosa_massis.jpeg" alt="Cara sud del massís Penyagolosa">
+                <img src="img/penyagolosa_vista.jpeg" alt="Pic del Martinet des del cim de Penyagolosa">
             </div>
             <p>Vistes del parc natural de Penyagolosa</p>
         </div>
@@ -83,9 +84,27 @@
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
+
+        <h2>Quin temps fa al parc?</h2>
+        <div id="weather-container">
+            <div id="weather-info">
+                <div id="weather-icon"></div>
+                <img id="park-icon" src="./img/penyagolosa_logo_green.svg" alt="">
+            </div>
+            <div id="weather-data">
+                <ul>
+                    <li id="weather-data-condition">Condició meteorològica: no disponible</li>
+                    <li id="weather-data-temperature">Temperatura: no disponible</li>
+                    <li id="weather-data-humidity">Humitat: no disponible</li>
+                    <li id="weather-data-visibility">Visibilitat: no disponible</li>
+                    <li id="weather-data-windspeed">Velocitat del vent: no disponible</li>
+                </ul>
+            </div>
+        </div>
     </main>
-    <include src="footer.html"></include>
+    <include src="partial/footer.html"></include>
     <script src="js/slider.js"></script>
+    <script src="js/weather.js"></script>
 </body>
 
 </html>

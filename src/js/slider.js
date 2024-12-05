@@ -6,7 +6,7 @@ let currentImage = 0;
 
 /**
  * Function that automatically changes the image displayed in the slider.
- * Every 3 seconds the function moves the position of the slider image 
+ * Every 5 seconds the function moves the position of the slider image 
  * horizontally to show the next image, creating a continuous circular effect.
  */
 setInterval(() => {
@@ -16,4 +16,7 @@ setInterval(() => {
     if (currentImage > (images.length - 1)) {
         currentImage = 0;
     }
-}, 3000);
+    /* currentImage = currentImage % (images.length); */
+    
+
+}, 5000);

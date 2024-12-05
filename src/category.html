@@ -8,21 +8,48 @@
     <meta name="keywords" content="Penyagolosa, parc, flora, vegetació, fauna, patrimoni">
     <meta name="author" content="Javier Garcia">
     <title>Categoria</title>
+    <include src="partial/favicon.html"></include>
     <link rel="stylesheet" href="css/styles.scss">
 </head>
 
 <body class="category">
-    <include src="header.html"></include>
+    <include src="partial/header.html"></include>
     <main class="container">
-        <h1>Parc natural del Penyagolosa</h1>
         <h2>Categories</h2>
         <ul>
-            <li><a href="detail-flora.html"><img src="img/flower.png" alt="Flora">Flora i vegetació</a></li>
-            <li><a href="detail-wildlife.html"><img src="img/butterfly.png" alt="Fauna">Fauna</a></li>
-            <li><a href="detail-heritage.html"><img src="img/windmill.png" alt="Patrimoni">Patrimoni</a></li>
+            <li>
+                <a href="detail-flora.html">
+                    <picture>
+                        <source srcset="img/rebollar_capvespre.jpeg?as=avif" type="image/avif">
+                        <source srcset="img/rebollar_capvespre.jpeg?as=webp" type="image/webp">
+                        <img src="img/rebollar_capvespre.jpeg" alt="Flora i vegetació">
+                    </picture>
+                    Flora i vegetació
+                </a>
+            </li>
+            <li>
+                <a href="detail-wildlife.html">
+                    <picture>
+                        <source srcset="img/iberian_ibex.jpeg?as=avif" type="image/avif">
+                        <source srcset="img/iberian_ibex.jpeg?as=webp" type="image/webp">
+                        <img src="img/iberian_ibex.jpeg" alt="Fauna">
+                    </picture>
+                    Fauna
+                </a>
+            </li>
+            <li>
+                <a href="detail-heritage.html">
+                    <picture>
+                        <source srcset="img/ermitori_sant_joan_baptista_entrada.jpeg?as=avif" type="image/avif">
+                        <source srcset="img/ermitori_sant_joan_baptista_entrada.jpeg?as=webp" type="image/webp">
+                        <img src="img/ermitori_sant_joan_baptista_entrada.jpeg" alt="Patrimoni">
+                    </picture>
+                    Patrimoni
+                </a>
+            </li>
         </ul>
     </main>
-    <include src="footer.html"></include>
+    <include src="partial/footer.html"></include>
 </body>
 
 </html>

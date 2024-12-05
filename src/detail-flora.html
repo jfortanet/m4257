@@ -8,14 +8,22 @@
     <meta name="keywords" content="Penyagolosa, parc, naturalesa, Castelló, flora, vegetació">
     <meta name="author" content="Javier Garcia">
     <title>Flora</title>
+    <include src="partial/favicon.html"></include>
     <link rel="stylesheet" href="css/styles.scss">
 </head>
 
 <body class="detail">
-    <include src="header.html"></include>
+    <include src="partial/header.html"></include>
     <main class="container">
         <article>
-            <h1>Parc natural del Penyagolosa</h1>
+            <figure class="featured-image">
+                <picture>
+                    <source srcset="img/rebollar_capvespre.jpeg?as=avif" type="image/avif">
+                    <source srcset="img/rebollar_capvespre.jpeg?as=webp" type="image/webp">
+                    <img src="img/rebollar_capvespre.jpeg" alt="Camí del Rebollar al capvespre">
+                </picture>
+                <figcaption>Camí del Rebollar al capvespre</figcaption>
+            </figure>
             <nav>
                 <ul>
                     <li><a href="detail-wildlife.html">Fauna</a></li>
@@ -55,25 +63,41 @@
                 <ul>
                     <li>
                         <figure>
-                            <img src="img/acer_granatense.jpg" alt="Auró en un cingle">
+                            <picture>
+                                <source srcset="img/acer_granatense.jpeg?as=avif" type="image/avif">
+                                <source srcset="img/acer_granatense.jpeg?as=webp" type="image/webp">
+                                <img src="img/acer_granatense.jpeg" alt="Auró en un cingle">
+                            </picture>
                             <figcaption>Auró (<i lang="la">Acer granatense</i>)</figcaption>
                         </figure>
                     </li>
                     <li>
                         <figure>
-                            <img src="img/quercus_ilex.jpg" alt="Alzina en un camp assollejat">
+                            <picture>
+                                <source srcset="img/quercus_ilex.jpeg?as=avif" type="image/avif">
+                                <source srcset="img/quercus_ilex.jpeg?as=webp" type="image/webp">
+                                <img src="img/quercus_ilex.jpeg" alt="Alzina en un camp assollejat">
+                            </picture>
                             <figcaption>Alzina (<i lang="la">Quercus ilex ssp. rotundifolia</i>)</figcaption>
                         </figure>
                     </li>
                     <li>
                         <figure>
-                            <img src="img/pinus_halepensis.jpg" alt="Pi blanc que sobresurt d'altres">
+                            <picture>
+                                <source srcset="img/pinus_halepensis.jpeg?as=avif" type="image/avif">
+                                <source srcset="img/pinus_halepensis.jpeg?as=webp" type="image/webp">
+                                <img src="img/pinus_halepensis.jpeg" alt="Pi blanc que sobresurt d'altres">
+                            </picture>
                             <figcaption>Pi blanc (<i lang="la">Pinus halepensis</i>)</figcaption>
                         </figure>
                     </li>
                     <li>
                         <figure>
-                            <img src="img/taxus_baccata.jpg" alt="Teixeixo un dia ennuvolat">
+                            <picture>
+                                <source srcset="img/taxus_baccata.jpeg?as=avif" type="image/avif">
+                                <source srcset="img/taxus_baccata.jpeg?as=webp" type="image/webp">
+                                <img src="img/taxus_baccata.jpeg" alt="Teixeixo un dia ennuvolat">
+                            </picture>
                             <figcaption>Teixeixo (<i lang="la">Taxus baccata</i>)</figcaption>
                         </figure>
                     </li>
@@ -81,7 +105,7 @@
             </section>
         </article>
     </main>
-    <include src="footer.html"></include>
+    <include src="partial/footer.html"></include>
 </body>
 
 </html>

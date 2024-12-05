@@ -3,9 +3,6 @@
 $font-stack: Helvetica, Arial, sans-serif;
 
 $breakpoint-small: 576px;
-$breakpoint-middle: 768px;
-$breakpoint-large: 992px;
-$breakpoint-extralarge: 1200px;
 
 /* Default colors */
 :root {
@@ -13,7 +10,7 @@ $breakpoint-extralarge: 1200px;
     --color-text: #2e2300;
     --color-link:#c04c15;
     --color-contrast-link:#cb0000;
-    --color-background: #f6f5f4;
+    --color-background: #fff;
     --color-shadow: #deddda;
 }
 
@@ -54,19 +51,23 @@ body {
 
 h1 {
     @include titles;
-    font-size: 3rem;
+    /* font-size: 3rem; */
+    font-size: clamp(2rem, 3vw, 3rem);
+    
 }
 
 h2 {
     @include titles;
-    font-size: 2rem;
+    /* font-size: 2rem; */
+    font-size: clamp(1.5rem, 2vw, 2rem);
     margin-top: 2rem;
     margin-bottom: 0.5rem;
 }
 
 h3 {
     @include titles;
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
+    font-size: clamp(1rem, 1.25vw, 1.5rem);
     margin-top: 2rem;
     margin-bottom: 0.5rem;
 }
@@ -78,54 +79,65 @@ figcaption {
 
 .container {
     margin: 0 auto;
-    width: 100%;
-}
-
-@media (min-width: $breakpoint-small) {
-    .container {
-        max-width: 98%;
-    }
-}
-    
-@media (min-width: $breakpoint-middle) {
-    .container {
-        max-width: 95%;
-    }
-}
-    
-@media (min-width: $breakpoint-large) {
-    .container {
-        max-width: 90%;
-    }
-}
-    
-@media (min-width: $breakpoint-extralarge) {
-    .container {
-        max-width: 80%;
-    }
+    width: 80%;
 }
 
 header {
+    display: flex;
+    justify-content: flex-start;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background: var(--color-background);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    div.brand {
-        font-size: 1.2rem;
+    box-shadow: 0px 3px 0px var(--color-shadow);
+    img {
+        width: 15%;
+    }
+    h1 {
+        margin: 0 auto 0 20%;
+    }
+}
+
+footer {
+    div.divider {
+        text-align: center;
         img {
-            width: 5rem;
-            margin-left: 10px;
-            margin-right: 5px;
+            max-width: 25%;
+            margin-bottom: 0.8rem;
+        } 
+    }
+    nav {
+        text-align: center;
+        /* font-size: 1.5rem; */
+        font-size: clamp(1rem, 1.5vw, 1.5rem);
+        margin: 3rem;
+        ul {
+            background-color: var(--color-shadow);
+            border-radius: 20px;
+            width: 70%;
+            margin: 0 auto;
+            li {
+                display: inline-block;
+            }
+            li::before {
+                content: " | ";
+                width: 10px;
+            }
+            li:first-child::before {
+                content: "";
+            }
         }
+    }
+    div.author {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-size: 0.80rem;
+        padding-top: 2rem;
     }
 }
 
 nav {
-    font-size: 1.2rem;
-    text-align: right;
-    padding-right: 10px;
     ul {
         li {
             display: inline-block;
@@ -143,6 +155,9 @@ nav {
 a {
     color: var(--color-link);
     text-decoration: none;
+    -webkit-transition: font-weight 0.5s ease-out, color 0.5s ease-out;
+    -o-transition: font-weight 0.5s ease-out, color 0.5s ease-out;
+    transition: font-weight 0.5s ease-out, color 0.5s ease-out;
 }
 
 a:hover {
@@ -151,47 +166,45 @@ a:hover {
     text-decoration: none;
 }
 
-footer {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 0.80rem;
-    padding-top: 2rem;
-}
-
-
-/* ***** Page: index.html ***** */
 
 body.index {
     main {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        height: 80vh;
         text-align: center;
         align-items: center;
-        h1 {
-            font-size: 5rem;
-        }
-        h1::before {
-            display: inline-block;
-            background-image: url(../img/penyagolosa_logo_black.svg);
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-position: top;
-            width: 10rem;
-            height: 3rem;
-            margin-right: 0.5rem;
-            content:"";
-        }
-        @media (prefers-color-scheme: dark) {
-            h1::before {
-                background-image: url(../img/penyagolosa_logo_white.svg);
+        margin-top: 2rem;
+        div {
+            position: relative;
+            width: 50%;
+            #ornament-image {
+                width: 90%;
+                height: auto;
+                /* -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%); */
+                /* mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%); */
+                /* -webkit-mask-image: radial-gradient(circle, rgba(192, 76, 21, 0.75) 0%, rgba(192, 76, 21, 0) 100%); */
+                mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.75) 0%, rgba(192, 76, 21, 0) 100%);
             }
-        }
-        p {
-            font-size: 2rem;
+            #overlay-image {
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                max-width: 60%;
+                -o-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                clip-path: circle(40% at 50% 50%);
+            }
+            p {
+                position: absolute;
+                top: 95%;
+                left: 50%;
+                -o-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                color: var(--color-title);
+                font-weight: 700;
+                font-size: clamp(0.25rem, 1.25vw, 3rem);
+            }
         }
     }
 }
@@ -209,13 +222,19 @@ body.category {
             list-style: none;
             margin: 2rem;
             li {
-                font-size: 1.25rem;
-                font-weight: 700;
+                /* font-size: 1.25rem; */
+                font-size: clamp(1rem, 1.5vw, 1.5rem);
                 margin-bottom: 1.5rem;
                 img {
                     display: block;
                     margin: 0 auto;
-                    max-width: 100px;
+                    max-width: 55%;
+                    height: auto;
+                    border-radius: 20px;
+                    box-shadow: 3px 5px 5px var(--color-shadow);
+                }
+                img:hover {
+                    border: 2px solid var(--color-contrast-link);
                 }
             }
         }
@@ -236,7 +255,9 @@ body.presentation {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
-                transition: transform 0.3s ease-in;
+                -webkit-transition: transform 0.5s ease-in;
+                -o-transition: transform 0.5s ease-in;
+                transition: transform 0.5s ease-in;
                 img {
                     display: block;
                     min-width: 100%;
@@ -285,6 +306,44 @@ body.presentation {
                 border: none;
             }
         }
+        #weather-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            align-items: center;
+        }
+        @media (max-width: $breakpoint-small) {
+            #weather-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        #weather-info {
+            text-align: center;
+        }
+        
+        #park-icon {
+            width: 200px;
+        }
+        
+        #weather-icon {
+            animation: moveUp 3s 1 ease-in forwards;
+        }
+        @keyframes moveUp {
+            0% { transform: translate(0%, 50%); opacity: 0; }
+            50% { transform: translate(0%, 30%); opacity: 0; }
+            100% { transform: translate(5%, 15%); opacity: 1; }
+        }
+
+        #weather-data {
+            padding-left: 1rem;
+            ul {
+                list-style-type: square;
+                li::marker {
+                    color: var(--color-contrast-link);
+                }
+            }
+        }
     }
 }
 
@@ -293,6 +352,36 @@ body.presentation {
 
 body.detail {
     main {
+        margin-top: 2rem;
+        figure {
+            text-align: center;
+        }
+        .featured-image {
+            -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 2%, rgba(0, 0, 0, 1) 98%, rgba(0, 0, 0, 0) 100%);
+            mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 2%, rgba(0, 0, 0, 1) 98%, rgba(0, 0, 0, 0) 100%);
+        }
+        picture {
+            display: block;
+            width: 100%;
+            height: 25rem;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 3px 5px 5px var(--color-shadow);
+            position: relative;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: inherit;
+            }
+        }
+        nav {
+            text-align: right;
+            /* font-size: 1.25rem; */
+            font-size: clamp(1rem, 1.25vw, 1.5rem);
+            padding-right: 10px;
+            margin-top: 2rem;
+        }
         .detail-items {
             ul {
                 display: grid;
@@ -303,12 +392,16 @@ body.detail {
                 margin: 0 auto;
                 li {
                     text-align: center;
-                    img {
+                    picture {
                         display: block;
                         max-width: 100%;
+                        height: auto;
                         margin: 0 auto;
                         border-radius: 20px;
                         box-shadow: 3px 5px 5px var(--color-shadow);
+                        img {
+                            vertical-align: middle;
+                        }
                     }
                     iframe {
                         display: block;
@@ -326,13 +419,12 @@ body.detail {
                     }
                 }
             }
+            @media (max-width: $breakpoint-small) {
+                ul {
+                    grid-template-columns: 1fr;
+                }
+            }
         }
-    }
-}
-
-@media (max-width: $breakpoint-small) {
-    .detail-items ul {
-        grid-template-columns: 1fr;
     }
 }
 
