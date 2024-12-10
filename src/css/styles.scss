@@ -8,10 +8,10 @@ $breakpoint-small: 576px;
 :root {
     --color-title: #6e6702;
     --color-text: #2e2300;
-    --color-link:#c04c15;
+    --color-link:#A33107; /*#c04c15;*/
     --color-contrast-link:#cb0000;
     --color-background: #fff;
-    --color-shadow: #deddda;
+    --color-shadow: #f6f5f4; /*#deddda;*/
 }
 
 /* Colors for dark theme */
@@ -86,13 +86,13 @@ header {
     display: flex;
     justify-content: flex-start;
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
     box-shadow: 0px 3px 0px var(--color-shadow);
     img {
         width: 15%;
     }
     h1 {
-        margin: 0 auto 0 20%;
+        margin: 0 auto 0 12%;
     }
 }
 
@@ -112,7 +112,7 @@ footer {
         ul {
             background-color: var(--color-shadow);
             border-radius: 20px;
-            width: 70%;
+            width: 50%;
             margin: 0 auto;
             li {
                 display: inline-block;
@@ -181,24 +181,25 @@ body.index {
             #ornament-image {
                 width: 90%;
                 height: auto;
-                /* -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%); */
-                /* mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%); */
-                /* -webkit-mask-image: radial-gradient(circle, rgba(192, 76, 21, 0.75) 0%, rgba(192, 76, 21, 0) 100%); */
-                mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.75) 0%, rgba(192, 76, 21, 0) 100%);
+                -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+                -o-mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+                mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
             }
             #overlay-image {
                 position: absolute;
                 top: 45%;
                 left: 50%;
                 max-width: 60%;
+                -webkit-transform: translate(-50%, -50%);
                 -o-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
                 clip-path: circle(40% at 50% 50%);
             }
-            p {
+            h2 {
                 position: absolute;
                 top: 95%;
                 left: 50%;
+                -webkit-transform: translate(-50%, -50%);
                 -o-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
                 color: var(--color-title);
@@ -228,7 +229,7 @@ body.category {
                 img {
                     display: block;
                     margin: 0 auto;
-                    max-width: 55%;
+                    max-width: 45%;
                     height: auto;
                     border-radius: 20px;
                     box-shadow: 3px 5px 5px var(--color-shadow);
@@ -358,6 +359,7 @@ body.detail {
         }
         .featured-image {
             -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 2%, rgba(0, 0, 0, 1) 98%, rgba(0, 0, 0, 0) 100%);
+            -o-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 2%, rgba(0, 0, 0, 1) 98%, rgba(0, 0, 0, 0) 100%);
             mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 2%, rgba(0, 0, 0, 1) 98%, rgba(0, 0, 0, 0) 100%);
         }
         picture {

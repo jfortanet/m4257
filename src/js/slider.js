@@ -13,10 +13,5 @@ setInterval(() => {
     let percentage = currentImage * -100; // Displacement percentage.
     sliderInner.style.transform = "translateX(" + percentage + "%)";
     currentImage++;
-    if (currentImage > (images.length - 1)) {
-        currentImage = 0;
-    }
-    /* currentImage = currentImage % (images.length); */
-    
-
+    currentImage = currentImage % (images.length);
 }, 5000);

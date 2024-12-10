@@ -8,7 +8,7 @@ async function fetchWeather() {
         document.getElementById('weather-data-humidity').innerHTML = `Humitat: <strong>${data.main.humidity} %</strong>`;
         document.getElementById('weather-data-visibility').innerHTML = `Visibilitat: <strong>${data.visibility} m</strong>`;
         document.getElementById('weather-data-windspeed').innerHTML = `Velocitat del vent: <strong>${data.wind.speed} m/s</strong>`;
-        document.getElementById('weather-icon').innerHTML = `<img src='https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png'/>`;
+        document.getElementById('weather-icon').innerHTML = `<img src='https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png' alt="Meteorologia"/>`;
     } catch (e) {
         document.getElementById('weather-data-condition').innerHTML = 'Condició meteorològica: no disponible';
         document.getElementById('weather-data-temperature').innerHTML = 'Temperatura: no disponible';
