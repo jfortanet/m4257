@@ -222,10 +222,9 @@ body.category {
             list-style: none;
             margin: 2rem;
             li {
-                /* font-size: 1.25rem; */
                 font-size: clamp(1rem, 1.5vw, 1.5rem);
                 margin-bottom: 1.5rem;
-                img {
+                picture img {
                     display: block;
                     margin: 0 auto;
                     max-width: 45%;
@@ -233,7 +232,7 @@ body.category {
                     border-radius: 20px;
                     box-shadow: 3px 5px 5px var(--color-shadow);
                 }
-                img:hover {
+                picture img:hover {
                     border: 2px solid var(--color-contrast-link);
                 }
             }
@@ -261,6 +260,7 @@ body.presentation {
                 img {
                     display: block;
                     min-width: 100%;
+                    height: auto;
                     aspect-ratio: 16/9;
                     object-fit: cover;
                     border-radius: 20px;
