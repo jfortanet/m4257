@@ -52,7 +52,7 @@ body {
 h1 {
     @include titles;
     font-size: clamp(2rem, 3vw, 3rem);
-    
+    text-align: center;
 }
 
 h2 {
@@ -132,6 +132,14 @@ footer {
         align-items: flex-end;
         font-size: 0.80rem;
         padding-top: 1rem;
+        p {
+            margin: 0.25rem;
+        }
+    }
+    @media (max-width: $breakpoint-small) {
+        div.author {
+            justify-content: center;
+        }
     }
 }
 
