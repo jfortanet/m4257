@@ -81,7 +81,10 @@
         <div class="iframe-container">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4314908.9363732515!2d-5.08488892913756!3d39.76434282097682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5fc3dea03333af%3A0x92b8a58647c8245f!2sPenyagolosa!5e0!3m2!1ses!2ses!4v1729318877630!5m2!1ses!2ses"
-                title="Mapa ubicació Parc de Penyagolosa" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                title="Mapa ubicació Parc de Penyagolosa"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
 
@@ -89,7 +92,7 @@
         <div id="weather-container">
             <div id="weather-info">
                 <div id="weather-icon"></div>
-                <img id="park-icon" src="./img/penyagolosa_logo_green.svg" alt="Isotip del lloc">
+                <img id="park-icon" src="./img/penyagolosa_logo_green.svg" alt="Isotip del lloc" loading="lazy" width="200" height="48">
             </div>
             <div id="weather-data">
                 <ul>
@@ -103,8 +106,8 @@
         </div>
     </main>
     <include src="partial/footer.html"></include>
-    <script src="js/slider.js"></script>
-    <script src="js/weather.js"></script>
+    <script src="js/slider.js" async></script>
+    <script src="js/weather.js" async></script>
 </body>
 
 </html>
